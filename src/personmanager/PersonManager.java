@@ -23,7 +23,7 @@ public class PersonManager
         
         String[] arrPersons = new String[10];
         
-        arrPersons[0] = "Stegger";
+        arrPersons[0] = "Jeppe";
         
         for (int i = 0; i < arrPersons.length; i++)
         {
