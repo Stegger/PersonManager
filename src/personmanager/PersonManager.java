@@ -35,7 +35,7 @@ public class PersonManager
         //Eksempel med lister
         ArrayList<String> listPersons = new ArrayList<>();
         
-        String aTeacher = new String("Jeppe");
+        String aTeacher = new String("Peter");
         
         listPersons.add("Stegger");
         listPersons.add(aTeacher);
