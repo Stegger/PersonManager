@@ -36,6 +36,7 @@ public class PersonManager
         ArrayList<String> listPersons = new ArrayList<>();
         
         String aTeacher = new String("Lars");
+        String aTeacher = new String("Peter");
         
         listPersons.add("Stegger");
         listPersons.add(aTeacher);
