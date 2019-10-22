@@ -9,7 +9,7 @@ package personmanager.be;
  *
  * @author pgn
  */
-public abstract class Person
+public class Person
 {
     
     private final int id;
@@ -52,6 +52,13 @@ public abstract class Person
     {
         this.email = email;
     }
+
+    @Override
+    public String toString()
+    {
+        return id + "       " + name + "       " + email;
+    }
+
     
     
     

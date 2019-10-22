@@ -6,8 +6,8 @@
 package personmanager.gui;
 
 import java.util.ArrayList;
+import java.util.List;
 import personmanager.be.Person;
-import personmanager.be.Teacher;
 
 /**
  *
@@ -22,20 +22,17 @@ public class App
     public static void main(String[] args)
     {
        
-        Person p1 = new Teacher(1, "Peter", "pgn@easv.dk", "pgn");
-        Person p2 = new Teacher(2, "Jeppe", "jml@easv.dk", "jml");
-        Person p3 = new Teacher(3, "Trine", "tgh@easv.dk", "tgh");
+        ArrayList<Person> persons = new ArrayList<>();
         
-        Teacher ole = new Teacher(4, "Ole", "oe@easv.dk", "oe");
+        persons.add(new Person(10, "Jeppe"));
+        persons.add(new Person(2, "Jeppe"));
+        persons.add(new Person(3, "Jeppe"));
         
-        
-        
-        
-        System.out.println("Oles id is " + ole.getId());
-        
-        
-        
-        
+        System.out.println("ID      NAME      EMAIL");
+        for (Person person : persons)
+        {
+            System.out.println(person);
+        }
     }
 
 }

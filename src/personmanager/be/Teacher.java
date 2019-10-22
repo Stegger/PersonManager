@@ -13,6 +13,7 @@ public class Teacher extends Person
 {
 
     private String initials;
+    private double salary;
 
     public Teacher(int id, String name, String email, String initials)
     {
@@ -30,4 +31,16 @@ public class Teacher extends Person
         this.initials = initials;
     }
 
+    public double getSalary()
+    {
+        return salary;
+    }
+
+    public void setSalary(double salary)
+    {
+        this.salary = salary;
+    }
+
+    
+    
 }
