@@ -14,10 +14,16 @@ import java.util.List;
  */
 public class Teacher extends Person
 {
-    
+
     private List<String> subjects;
     private String initials;
     private double salary;
+
+    public Teacher(int id, String name)
+    {
+        super(id, name);
+        subjects = new ArrayList<>();
+    }
 
     public Teacher(int id, String name, String email, String initials)
     {
@@ -31,9 +37,8 @@ public class Teacher extends Person
         super(id, name, email);
         this.initials = initials;
         this.subjects = subjects;
+
     }
-    
-    
 
     public String getInitials()
     {
@@ -53,17 +58,14 @@ public class Teacher extends Person
     public void setSalary(double salary)
     {
         this.salary = salary;
-        
-        
-        
+
     }
 
     @Override
     public String toString()
     {
-        return super.toString() + "      " + initials; //To change body of generated methods, choose Tools | Templates.
+        
+        return super.toString() + "      " + initials + "    " + subjects.get(0);
     }
 
-    
-    
 }
