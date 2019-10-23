@@ -13,7 +13,7 @@ public class Person
 {
     
     private final int id;
-    private String name;
+    protected String name;
     private String email;
     
     public Person(int id, String name)
@@ -35,6 +35,10 @@ public class Person
 
     public String getName()
     {
+        
+        
+        
+        
         return name;
     }
 
@@ -56,9 +60,10 @@ public class Person
     @Override
     public String toString()
     {
-        return id + "       " + name + "       " + email;
+        return id + "      " + name + "       " + email;
     }
 
+    
     
     
     
