@@ -22,13 +22,24 @@ public class App
      */
     public static void main(String[] args)
     {
-       
-        ArrayList<Person> persons = new ArrayList<>();
+        exercise1();
+
         
+        
+        
+    }
+
+    private static void exercise1()
+    {
+        ArrayList<Person> persons = new ArrayList<>();
+
         persons.add(new Person(1, "Jeppe"));
         persons.add(new Person(2, "Peter"));
         persons.add(new Person(3, "Trine"));
+        persons.add(new Teacher(4, "Ole"));
+        persons.add(new Teacher(5, "Bent"));
         
+
         System.out.println("ID      NAME      EMAIL");
 //        for (Person person : persons)
 //        {
@@ -45,6 +56,10 @@ public class App
         System.out.println(tch.toString());
         
          
+        for (Person person : persons)
+        {
+            System.out.println(person.toString());
+        }
     }
 
 }
