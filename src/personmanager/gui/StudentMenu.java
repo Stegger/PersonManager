@@ -5,12 +5,15 @@
  */
 package personmanager.gui;
 
+import personmanager.bll.PersonManager;
+
 /**
  *
  * @author pgn
  */
 public class StudentMenu extends Menu
 {
+    private PersonManager personManager;
 
     public StudentMenu()
     {
@@ -20,7 +23,7 @@ public class StudentMenu extends Menu
     @Override
     protected void doAction(int option)
     {
-        System.out.println("You chose " + option);
+        
     }
     
    

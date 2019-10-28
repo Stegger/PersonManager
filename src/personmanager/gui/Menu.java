@@ -21,7 +21,7 @@ public abstract class Menu
     private String header;
     private String[] menuItems;
     private String inputText = "Please choose your menu option:";
-    private Scanner scanner;
+    protected Scanner scanner;
 
     /**
      * Creates an instance of the class with the given header text and menu
