@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import personmanager.be.Person;
 import personmanager.be.Teacher;
+import personmanager.bll.PersonManager;
 
 /**
  *
@@ -22,8 +23,8 @@ public class App
      */
     public static void main(String[] args)
     {
-        
-        Menu menu = new MainMenu();
+        PersonManager personManager = new PersonManager();
+        Menu menu = new MainMenu(personManager);
         menu.run();
     }
 
@@ -36,23 +37,21 @@ public class App
         persons.add(new Person(3, "Trine"));
         persons.add(new Teacher(4, "Ole"));
         persons.add(new Teacher(5, "Bent"));
-        
 
         System.out.println("ID      NAME      EMAIL");
         for (Person person : persons)
         {
             System.out.println(person.toString());
         }
-        
+
         Object obj = new Person(4, "Ole", "oe@easv.dk");
         Person prs = new Person(5, "Bent", "bhp@easv.dk");
         Object tch = new Teacher(6, "Henrik", "hk@easv.dk", "hk");
-        
-        
+
         System.out.println(obj.toString());
         System.out.println(prs.toString());
         System.out.println(tch.toString());
-        
+
         for (Person person : persons)
         {
             System.out.println(person.toString());

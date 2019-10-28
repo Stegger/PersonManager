@@ -5,6 +5,8 @@
  */
 package personmanager.gui;
 
+import personmanager.bll.PersonManager;
+
 /**
  *
  * @author pgn
@@ -12,9 +14,9 @@ package personmanager.gui;
 public class MainMenu extends Menu
 {
 
-    public MainMenu()
+    public MainMenu(PersonManager personManager)
     {
-        super("Main menu", "Manage students", "Manage teachers");
+        super(personManager, "Main menu", "Manage students", "Manage teachers");
     }
 
     @Override
@@ -26,7 +28,7 @@ public class MainMenu extends Menu
                 new StudentMenu().run();
                 break;
             case 2:
-                new TeacherMenu().run();
+                new TeacherMenu(personManager).run();
                 break;
             default:
                 //Do nothing.

@@ -6,6 +6,7 @@
 package personmanager.gui;
 
 import java.util.Scanner;
+import personmanager.bll.PersonManager;
 
 /**
  *
@@ -22,6 +23,7 @@ public abstract class Menu
     private String[] menuItems;
     private String inputText = "Please choose your menu option:";
     protected Scanner scanner;
+    protected final PersonManager personManager;
 
     /**
      * Creates an instance of the class with the given header text and menu
@@ -30,10 +32,11 @@ public abstract class Menu
      * @param header The header text of the menu.
      * @param menuItems The list of menu items texts.
      */
-    public Menu(String header, String... menuItems)
+    public Menu(PersonManager personManager, String header, String... menuItems)
     {
         this.header = header;
         this.menuItems = menuItems;
+        this.personManager = personManager;
         scanner = new Scanner(System.in);
     }
 

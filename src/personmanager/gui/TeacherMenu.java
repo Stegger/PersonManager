@@ -16,12 +16,10 @@ import personmanager.bll.PersonManager;
  */
 public class TeacherMenu extends Menu
 {
-    private PersonManager personManager;
-    
-    public TeacherMenu()
+
+    public TeacherMenu(PersonManager personManager)
     {
-        super("Teacher menu", "Add teacher", "Get all teachers");
-        personManager = new PersonManager();
+        super(personManager, "Teacher menu", "Add teacher", "Get all teachers");
     }
 
     @Override
@@ -58,5 +56,5 @@ public class TeacherMenu extends Menu
         }
         pause();
     }
-    
+
 }
