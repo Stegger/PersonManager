@@ -22,11 +22,9 @@ public class App
      */
     public static void main(String[] args)
     {
-        exercise1();
-
         
-        
-        
+        Menu menu = new StudentMenu();
+        menu.run();
     }
 
     private static void exercise1()
@@ -41,10 +39,10 @@ public class App
         
 
         System.out.println("ID      NAME      EMAIL");
-//        for (Person person : persons)
-//        {
-//            System.out.println(person.toString());
-//        }
+        for (Person person : persons)
+        {
+            System.out.println(person.toString());
+        }
         
         Object obj = new Person(4, "Ole", "oe@easv.dk");
         Person prs = new Person(5, "Bent", "bhp@easv.dk");
@@ -55,7 +53,6 @@ public class App
         System.out.println(prs.toString());
         System.out.println(tch.toString());
         
-         
         for (Person person : persons)
         {
             System.out.println(person.toString());
