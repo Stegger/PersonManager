@@ -11,16 +11,16 @@ package personmanager.be;
  */
 public class Person
 {
-    
+
     private final int id;
     protected String name;
     private String email;
-    
+
     public Person(int id, String name)
     {
         this(id, name, "");
     }
-    
+
     public Person(int id, String name, String email)
     {
         this.id = id;
@@ -35,10 +35,6 @@ public class Person
 
     public String getName()
     {
-        
-        
-        
-        
         return name;
     }
 
@@ -63,8 +59,4 @@ public class Person
         return id + "      " + name + "       " + email;
     }
 
-    
-    
-    
-    
 }

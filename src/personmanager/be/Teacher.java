@@ -63,8 +63,13 @@ public class Teacher extends Person
 
     @Override
     public String toString()
-    {        
-        return super.toString() + "      " + initials;
+    {
+        String output = super.toString() + "      " + initials;
+        if (!subjects.isEmpty())
+        {
+            output += subjects.get(0);
+        }
+        return output;
     }
 
 }
