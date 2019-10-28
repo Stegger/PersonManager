@@ -13,11 +13,10 @@ import personmanager.bll.PersonManager;
  */
 public class StudentMenu extends Menu
 {
-    private PersonManager personManager;
-
+    
     public StudentMenu()
     {
-        super("Student menu", "Add student", "Get all students", "Take a break");
+        super(null, "Student menu", "Add student", "Get all students", "Take a break");
     }
 
     @Override
