@@ -16,11 +16,13 @@ public class StudentMenu extends Menu
     {
         super("Student menu", "Add student", "Get all students", "Take a break");
     }
-    
+
     @Override
     protected void doAction(int option)
     {
         System.out.println("You chose " + option);
     }
+    
+   
     
 }

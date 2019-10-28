@@ -23,7 +23,7 @@ public class App
     public static void main(String[] args)
     {
         
-        Menu menu = new StudentMenu();
+        Menu menu = new MainMenu();
         menu.run();
     }
 
