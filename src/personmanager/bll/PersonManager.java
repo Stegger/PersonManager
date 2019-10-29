@@ -19,7 +19,6 @@ public class PersonManager
 {
 
     private List<Person> persons;
-    
 
     public PersonManager()
     {
@@ -87,12 +86,30 @@ public class PersonManager
      */
     public List<Teacher> getAllTeachers()
     {
-        return null;
+        ArrayList<Teacher> allteachers = new ArrayList<>();
+        for (Person person : persons)
+        {
+            if (person instanceof Teacher)
+            {
+                Teacher t = (Teacher) person;
+                allteachers.add(t);
+            }
+        }
+        return allteachers;
     }
 
     public List<Student> getAllStudents()
     {
-        return null;
+        ArrayList<Student> allStudents = new ArrayList<>();
+        for (Person person : persons)
+        {
+            if (person instanceof Student)
+            {
+                Student s = (Student) person;
+                allStudents.add(s);
+            }
+        }
+        return allStudents;
     }
 
 }

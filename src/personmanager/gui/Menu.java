@@ -58,7 +58,7 @@ public abstract class Menu
                 nr = Integer.parseInt(nrAsString.trim());
             } catch (NumberFormatException nfe)
             {
-                //Do nothing, we will try again.
+                System.out.println("Invalid input, did you type a number?");
             }
             if (nr > menuItems.length) //If number is out of range, we change it to negative one
             {
@@ -84,7 +84,7 @@ public abstract class Menu
     public void run()
     {
         boolean done = false;
-        while (!done)
+        do
         {
             showMenu();
             int option = getOption();
@@ -93,7 +93,7 @@ public abstract class Menu
             {
                 done = true;
             }
-        }
+        } while (!done);
     }
 
     /**
@@ -108,8 +108,7 @@ public abstract class Menu
         {
             System.out.println((i + 1) + ": " + menuItems[i]);
         }
-        int option = getOption();
-        doAction(option);
+        System.out.println("0: Exit");
     }
 
     /**

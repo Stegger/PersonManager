@@ -45,6 +45,8 @@ public class TeacherMenu extends Menu
         int id = Integer.parseInt(idAsString);
         Teacher teacher = new Teacher(id, name);
         personManager.addPerson(teacher);
+        System.out.println("Teacher added");
+        pause();
     }
 
     private void printAllTeachers()

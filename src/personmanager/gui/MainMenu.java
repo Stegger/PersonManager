@@ -5,6 +5,7 @@
  */
 package personmanager.gui;
 
+import personmanager.be.Person;
 import personmanager.bll.PersonManager;
 
 /**
@@ -16,7 +17,7 @@ public class MainMenu extends Menu
 
     public MainMenu(PersonManager personManager)
     {
-        super(personManager, "Main menu", "Manage students", "Manage teachers");
+        super(personManager, "Main menu", "Manage students", "Manage teachers", "See all persons");
     }
 
     @Override
@@ -25,15 +26,28 @@ public class MainMenu extends Menu
         switch (option)
         {
             case 1:
-                new StudentMenu().run();
+                new StudentMenu(personManager).run();
                 break;
             case 2:
                 new TeacherMenu(personManager).run();
+                break;
+            case 3:
+                showAllPersons();
                 break;
             default:
                 //Do nothing.
                 break;
         }
+    }
+
+    private void showAllPersons()
+    {
+        System.out.println("Showing all persons.");
+        for (Person person : personManager.getAllPersons())
+        {
+            System.out.println(person);
+        }
+        pause();
     }
 
 }

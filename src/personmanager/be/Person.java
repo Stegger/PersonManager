@@ -5,6 +5,8 @@
  */
 package personmanager.be;
 
+import java.util.List;
+
 /**
  *
  * @author pgn
@@ -15,6 +17,7 @@ public class Person
     private final int id;
     protected String name;
     private String email;
+    
 
     public Person(int id, String name)
     {
