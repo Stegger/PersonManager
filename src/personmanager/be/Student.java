@@ -30,4 +30,9 @@ public class Student extends Person
         this(id, name, new ArrayList<GradeInfo>(), "");
     }
 
+    public void addGrade(GradeInfo grade)
+    {
+        gradeReport.add(grade);
+    }
+
 }
